@@ -3,6 +3,17 @@ import { ref, reactive } from "vue";
 import { templateRef } from "@vueuse/core";
 import SeamlessScroll from "/@/components/ReSeamlessScroll";
 
+// 例子
+/*
+  <template>
+    <div ref="target" />
+  </template>
+
+  普通写法：
+  const target = this.$refs.target
+  vueuse写法：
+  const target = templateRef('target')
+*/
 const scroll = templateRef<ElRef | null>("scroll", null);
 
 let listData = ref([

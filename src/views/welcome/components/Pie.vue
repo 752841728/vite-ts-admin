@@ -2,6 +2,7 @@
 import { ECharts } from "echarts";
 import echarts from "/@/plugins/echarts";
 import { onBeforeMount, onMounted, nextTick } from "vue";
+// 分别代替 addEventListener，安全onUnmounted（在组件生命周期内执行onUnmounted，否则不执行），带有控件的setTimeout
 import { useEventListener, tryOnUnmounted, useTimeoutFn } from "@vueuse/core";
 
 let echartInstance: ECharts;
